@@ -31,8 +31,8 @@
         </marquee>
       </marquee>
     </marquee>
-    <marquee class="spinny" scrollamount="12">😝😁😝</marquee>
-    <marquee behavior="alternate" height="300px" direction="down"
+    <marquee class="spinny" scrollamount="12" behavior="alternate">😝😁😝</marquee>
+    <marquee class="full-viewport" behavior="alternate" direction="down"
       ><marquee behavior="alternate"
         ><h3>BOUNCE<br />BOUNCE<br />BOUNCE</h3></marquee
       ></marquee
@@ -44,8 +44,8 @@
       animation-duration: 5000ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      width: 125%;
     }
+
     @keyframes spin {
       from {
         transform: rotate(0deg);
@@ -53,6 +53,14 @@
       to {
         transform: rotate(360deg);
       }
+    }
+
+    .full-viewport {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </html>
